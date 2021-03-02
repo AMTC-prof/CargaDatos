@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- Práctica del módulo Javascript (CargaDatos) elaborada por 
+Alfredo Ramírez para MASTERD Delegaciones. 
+[ Carga dinámica de datos en Select con Javascript ] 
+Adaptado a 1980x1080 de resolución.
+Mejor si se usa Chrome/Chromium como navegador.
+-->
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Práctica 4 :: Javascript :: MasterD</title>
+<link href="estilos.css" rel="stylesheet">
+<script type="text/javascript" src="cargadatos.js"></script>
+</head>
+<body onload="inicio()">
+<div class="caja0">
+        <span id="logo"><img src="logo.png" /></span>
+    </div>
+    <div class="caja1">
+    <h2>CARGA DINÁMICA DE DATOS CON JAVASCRIPT</h2>
+    <h3>El Señor de los Datillos</h3>
+        <br />
+        <p> <u>Primer paso:</u> Selecciona un valor en este combo: </p>
+        <form>
+                <p>
+                    <select id='select1' onChange='cargarSelect2(this.value);'>
+                        <option value='0'>Selecciona una opcion</option>
+                        <option value='1'>Magos</option>
+                        <option value='2'>Hobbits</option>
+                        <option value='3'>Enanos</option>
+                    </select>
+        <br />        <br />
+        <p> <u>Segundo paso:</u> Una vez seleccionado el primer valor, se cargará dinámicanente una lista de valores asociados al anterior listado en el siguiente combo.</p>
+        <br/>
+                <select id='select2' onChange='seleccionado_select2();' disabled>
+                    <option value='0'>Desactivado</option>
+                </select>
+                <div class="fotografia">
+                   <center>
+                        <img id="foto" src="img/10.jpg" />
+                        <p class="cazado" id="watch">Cuidado, Sauron te vigila...</p>
+                   </center>
+                </div>
+            </p>
+                <center>
+                    <input id="reset" type="button" name="Boton de borrado" onClick="location.reload();" class="boton gris" value="Reiniciar" />
+                </center>           
+        </form>
+        </div>
+</body>
+</html>
